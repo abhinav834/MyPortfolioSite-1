@@ -1,0 +1,36 @@
+<template>
+    <dialog class="myClass">
+        <h1>contact me </h1>
+
+        <form onsubmit={handleSubmit}>
+            <label for="first-name">
+                First Name
+                <input type="text" class="firstname" name="first-name">
+            </label>
+            <label for="last-name">
+                Last Name
+                <input type="text" class="lastname" name="last-name">
+            </label>
+            <label for="company">
+                Company
+                <input type="text" class="company" name="company">
+            </label>
+            <label for="email">
+                Email
+                <input type="email" class="email" name="email">
+            </label>
+            <textarea cols="40" rows="4" class="description" placeholder="What would you like to share about?"></textarea>
+
+            <div class="btn-class">
+                <input type="submit">
+                <button onclick={closeDialog}> Close </button>
+            </div>
+        </form>
+
+    </dialog>
+
+    <button class="launch-button" onclick={showDialog}>Contact me</button>
+
+    <c-snack-bar></c-snack-bar>
+
+</template>
